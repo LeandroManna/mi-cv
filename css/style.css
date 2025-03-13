@@ -1,0 +1,36 @@
+body {
+    background-color: #e0e0e0; /* Gris claro */
+    color: #333; /* Texto oscuro para mejor contraste */
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 20px;
+    background: #f1f1f1; /* Un gris más oscuro que el fondo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1, h3, h4, h5 {
+    color: #2c3e50; /* Azul grisáceo para títulos */
+}
+
+p {
+    color: #444; /* Gris oscuro para mejor legibilidad */
+}
+
+ul {
+    background: #e8e8e8; /* Fondo sutil para listas */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a {
+    color: #007bff; /* Azul Bootstrap para enlaces */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

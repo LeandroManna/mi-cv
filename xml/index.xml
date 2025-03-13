@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CurriculumVitae>
+    <Persona>
+        <Nombre>Leandro Ariel Manna</Nombre>
+        <Correo>leandromanna@gmail.com</Correo>
+        <GitHub>https://github.com/LeandroManna</GitHub>
+        <Telefono>+54 388 469 5353</Telefono>
+        <FechaNacimiento>1987-07-25</FechaNacimiento>
+    </Persona>
+    <PerfilProfesional>
+        <Descripcion>Técnico en Informática con amplia experiencia en telecomunicaciones, redes informáticas, infraestructura y programación.</Descripcion>
+    </PerfilProfesional>
+    <ExperienciaLaboral>
+        <Trabajo>
+            <Empresa>Canal 4</Empresa>
+            <Cargo>Técnico en Infraestructura, Sistemas y Contenidos</Cargo>
+            <Periodo>2022 – Presente</Periodo>
+            <Responsabilidades>
+                <Tarea>Instalación y mantenimiento del cableado de audio y video.</Tarea>
+                <Tarea>Ensamblaje y conectorización de VTRs y Play Out.</Tarea>
+                <Tarea>Gestión de servidores y configuración de switches.</Tarea>
+                <Tarea>Codificación en CentOS para streaming con FFMPEG.</Tarea>
+                <Tarea>Administración de Wowza Stream Manager.</Tarea>
+                <Tarea>Consulta a distintas APIs para enviar información al área de Contenidos.</Tarea>
+                <Tarea>Scraping con Python para generar datos automatizados para el área de Contenidos.</Tarea>
+                <Tarea>Transmisiones en vivo con unidad móvil de exteriores, utilizando switcher, VTR, consola de sonido y siete cámaras.</Tarea>
+                <Tarea>Administración, control y mantenimiento de cinco radios por streaming y tres por FM.</Tarea>
+            </Responsabilidades>
+        </Trabajo>
+        <Trabajo>
+            <Empresa>Canal 4</Empresa>
+            <Cargo>Técnico en Telecomunicaciones</Cargo>
+            <Periodo>2010 – 2022</Periodo>
+            <Responsabilidades>
+                <Tarea>Tendido de fibra óptica troncal.</Tarea>
+                <Tarea>Instalación y ecualización de Minibridger y Line Extender CNA.</Tarea>
+                <Tarea>Instalación y mantenimiento de FTTH y HFC.</Tarea>
+                <Tarea>Configuración de puntos de acceso Ubiquiti.</Tarea>
+            </Responsabilidades>
+        </Trabajo>
+        <Trabajo>
+            <Empresa>Proyectos Personales</Empresa>
+            <Cargo>Desarrollador y Automatizador</Cargo>
+            <Periodo>2022 – Presente</Periodo>
+            <Responsabilidades>
+                <Tarea>Desarrollo en Python, PHP, HTML, CSS y JavaScript.</Tarea>
+                <Tarea>Automatización en controles de servicio con Python e integración con Telegram.</Tarea>
+            </Responsabilidades>
+        </Trabajo>
+    </ExperienciaLaboral>
+    <Educacion>
+        <Estudio>
+            <Titulo>Técnico Superior en Informática</Titulo>
+            <Institucion>IES N° 5 José Eugenio Tello</Institucion>
+            <Periodo>2019 – 2021</Periodo>
+        </Estudio>
+        <Estudio>
+            <Titulo>Perito Mercantil - Administración Pública</Titulo>
+            <Institucion>CENS N° 42</Institucion>
+            <Periodo>2000 – 2006</Periodo>
+        </Estudio>
+    </Educacion>
+    <Habilidades>
+        <Habilidad>Redes y Telecomunicaciones</Habilidad>
+        <Habilidad>Infraestructura y Sistemas</Habilidad>
+        <Habilidad>Streaming y Multimedia</Habilidad>
+        <Habilidad>Programación en HTML, CSS, JavaScript, Python, PHP</Habilidad>
+        <Habilidad>Bases de datos MySQL, phpMyAdmin</Habilidad>
+        <Habilidad>Automatización y scraping</Habilidad>
+    </Habilidades>
+    <Idiomas>
+        <Idioma>
+            <Nombre>Español</Nombre>
+            <Nivel>Nativo</Nivel>
+        </Idioma>
+        <Idioma>
+            <Nombre>Inglés</Nombre>
+            <Nivel>Intermedio</Nivel>
+        </Idioma>
+    </Idiomas>
+</CurriculumVitae>
