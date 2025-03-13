@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('xml/index.xml') // Asegúrate de tener el archivo XML en el mismo directorio
+    fetch('xml/index.xml') // Asegúrate de que el archivo XML esté en la ruta correcta
         .then(response => response.text())
         .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
         .then(data => {
@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
             let educacion = data.querySelectorAll("Educacion Estudio");
             let habilidades = data.querySelectorAll("Habilidades Habilidad");
             let idiomas = data.querySelectorAll("Idiomas Idioma");
+            let referencias = data.querySelectorAll("Referencias Referencia");
 
-            // Obtener fecha de nacimiento (modifica el XML si es necesario para incluirlo)
-            let fechaNacimiento = "1987-07-25"; // Asegúrate de guardar esta fecha en tu XML
+            // Obtener fecha de nacimiento
+            let fechaNacimiento = persona.querySelector("FechaNacimiento").textContent;
 
             // Función para calcular la edad
             function calcularEdad(fechaNacimiento) {
@@ -73,6 +74,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 cvHTML += `<li>${idioma.querySelector("Nombre").textContent} - ${idioma.querySelector("Nivel").textContent}</li>`;
             });
             cvHTML += `</ul>`;
+
+            // Agregar referencias
+            if (referencias.length > 0) {
+                cvHTML += `<h4>Referencias</h4><ul>`;
+                referencias.forEach(ref => {
+                    cvHTML += `<li><strong>${ref.querySelector("Nombre").textContent}:</strong> ${ref.querySelector("Telefono").textContent}</li>`;
+                });
+                cvHTML += `</ul>`;
+            }
 
             document.getElementById("cv-content").innerHTML = cvHTML;
         })

@@ -6,13 +6,23 @@
         <GitHub>https://github.com/LeandroManna</GitHub>
         <Telefono>+54 388 469 5353</Telefono>
         <FechaNacimiento>1987-07-25</FechaNacimiento>
+        <Referencias>
+            <Referencia>
+                <Nombre>Muñoz Miguel</Nombre>
+                <Telefono>+54 388 412 4728</Telefono>
+            </Referencia>
+            <Referencia>
+                <Nombre>Gomez Roberto</Nombre>
+                <Telefono>+54 388 412 3600</Telefono>
+            </Referencia>
+        </Referencias>
     </Persona>
     <PerfilProfesional>
         <Descripcion>Técnico en Informática con amplia experiencia en telecomunicaciones, redes informáticas, infraestructura y programación.</Descripcion>
     </PerfilProfesional>
     <ExperienciaLaboral>
         <Trabajo>
-            <Empresa>Canal 4</Empresa>
+            <Empresa>Canal 4 - San Salvador de Jujuy - Argentina</Empresa>
             <Cargo>Técnico en Infraestructura, Sistemas y Contenidos</Cargo>
             <Periodo>2022 – Presente</Periodo>
             <Responsabilidades>
@@ -28,7 +38,7 @@
             </Responsabilidades>
         </Trabajo>
         <Trabajo>
-            <Empresa>Canal 4</Empresa>
+            <Empresa>Canal 4 - San Salvador de Jujuy - Argentina</Empresa>
             <Cargo>Técnico en Telecomunicaciones</Cargo>
             <Periodo>2010 – 2022</Periodo>
             <Responsabilidades>
