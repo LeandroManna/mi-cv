@@ -8,20 +8,6 @@ Puedes visualizar mi CV en línea a través de **GitHub Pages** accediendo al si
 
 ➡️ **[Mi Curriculum Vitae](https://leandromanna.github.io/mi-cv/)**
 
-## 📂 Estructura del Repositorio
-
-│   index.html    # Página principal que muestra el CV
-│   readme.md     # Documento con la descripción del proyecto
-│
-├───css
-│       style.css  # Estilos de la página
-│
-├───js
-│       index.js   # Funcionalidades interactivas
-│
-└───xml
-        index.xml  # Información del CV en formato XML
-
 ## 📜 Descripción
 
 Este proyecto tiene como objetivo proporcionar un acceso rápido y estructurado a mi perfil profesional utilizando GitHub Pages.
