@@ -15,6 +15,10 @@
                 <Telefono>+54 9 388 412 4728</Telefono>
             </Referencia>
             <Referencia>
+                <Nombre>Sergio D'Amico</Nombre>
+                <Telefono>+54 9 385 539 3041</Telefono>
+            </Referencia>
+            <Referencia>
                 <Nombre>Miguel Muñoz</Nombre>
                 <Telefono>+54 9 388 412 3600</Telefono>
             </Referencia>
@@ -115,7 +119,7 @@
         </Idioma>
         <Idioma>
             <Nombre>Inglés</Nombre>
-            <Nivel>Intermedio (lectura técnica avanzada)</Nivel>
+            <Nivel>Intermedio (lectura técnica)</Nivel>
         </Idioma>
     </Idiomas>
 </CurriculumVitae>
