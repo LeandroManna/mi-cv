@@ -1,90 +1,123 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('xml/index.xml') // Asegúrate de que el archivo XML esté en la ruta correcta
+document.addEventListener("DOMContentLoaded", function () {
+    fetch('xml/index.xml')
         .then(response => response.text())
         .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
         .then(data => {
-            let persona = data.querySelector("Persona");
-            let perfil = data.querySelector("PerfilProfesional Descripcion").textContent;
-            let experiencias = data.querySelectorAll("ExperienciaLaboral Trabajo");
-            let educacion = data.querySelectorAll("Educacion Estudio");
-            let habilidades = data.querySelectorAll("Habilidades Habilidad");
-            let idiomas = data.querySelectorAll("Idiomas Idioma");
-            let referencias = data.querySelectorAll("Referencias Referencia");
+            const persona       = data.querySelector("Persona");
+            const perfil        = data.querySelector("PerfilProfesional Descripcion").textContent;
+            const experiencias  = data.querySelectorAll("ExperienciaLaboral Trabajo");
+            const educacion     = data.querySelectorAll("Educacion Estudio");
+            const gruposHab     = data.querySelectorAll("Habilidades Grupo");
+            const idiomas       = data.querySelectorAll("Idiomas Idioma");
+            const referencias   = data.querySelectorAll("Referencias Referencia");
 
-            // Obtener fecha de nacimiento
-            let fechaNacimiento = persona.querySelector("FechaNacimiento").textContent;
+            // Datos de contacto
+            const nombre    = persona.querySelector("Nombre").textContent;
+            const correo    = persona.querySelector("Correo").textContent;
+            const telefono  = persona.querySelector("Telefono").textContent;
+            const github    = persona.querySelector("GitHub")?.textContent || "";
+            const ubicacion = persona.querySelector("Ubicacion")?.textContent || "";
+            const subtitulo = persona.querySelector("Titulo")?.textContent || "";
+            const fechaNac  = persona.querySelector("FechaNacimiento").textContent;
 
-            // Función para calcular la edad
-            function calcularEdad(fechaNacimiento) {
-                let hoy = new Date();
-                let nacimiento = new Date(fechaNacimiento);
-                let edad = hoy.getFullYear() - nacimiento.getFullYear();
-                let mes = hoy.getMonth() - nacimiento.getMonth();
-                if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
-                    edad--;
-                }
+            // Calcular edad
+            function calcularEdad(fecha) {
+                const hoy = new Date();
+                const nac = new Date(fecha);
+                let edad = hoy.getFullYear() - nac.getFullYear();
+                const m = hoy.getMonth() - nac.getMonth();
+                if (m < 0 || (m === 0 && hoy.getDate() < nac.getDate())) edad--;
                 return edad;
             }
+            const edad = calcularEdad(fechaNac);
 
-            let edadCalculada = calcularEdad(fechaNacimiento);
+            // ── HEADER ──────────────────────────────────────────────
+            let html = `
+            <div class="cv-header">
+                <div class="cv-header-main">
+                    <h2 class="cv-name">${nombre}</h2>
+                    <p class="cv-subtitle">${subtitulo}</p>
+                </div>
+                <div class="cv-header-contact">
+                    <p>📧 <a href="mailto:${correo}">${correo}</a></p>
+                    <p>📱 ${telefono}</p>
+                    <p>📍 ${ubicacion}</p>
+                    <p>💻 <a href="${github}" target="_blank">github.com/LeandroManna</a></p>
+                    <p>🌐 <a href="https://leandromanna.github.io/mi-cv/" target="_blank">leandromanna.github.io/mi-cv</a></p>
+                </div>
+            </div>`;
 
-            // Extraer GitHub
-            let github = persona.querySelector("GitHub") ? persona.querySelector("GitHub").textContent : "";
+            // ── PERFIL ───────────────────────────────────────────────
+            html += `
+            <div class="cv-section">
+                <h3 class="cv-section-title">Perfil Profesional</h3>
+                <p class="cv-perfil">${perfil}</p>
+            </div>`;
 
-            let cvHTML = `
-                <h3>${persona.querySelector("Nombre").textContent}</h3>
-                <p><strong>Email:</strong> ${persona.querySelector("Correo").textContent}</p>
-                <p><strong>Teléfono:</strong> ${persona.querySelector("Telefono").textContent}</p>
-                <p><strong>Edad:</strong> ${edadCalculada} años</p>
-                <p><strong>GitHub:</strong> <a href="${github}" target="_blank">${github}</a></p>
-                <h4>Perfil Profesional</h4>
-                <p>${perfil}</p>
-                <h4>Experiencia Laboral</h4>
-            `;
-
+            // ── EXPERIENCIA ──────────────────────────────────────────
+            html += `<div class="cv-section"><h3 class="cv-section-title">Experiencia Laboral</h3>`;
             experiencias.forEach(trabajo => {
-                cvHTML += `
-                    <div class="mb-3">
-                        <h5>${trabajo.querySelector("Empresa").textContent}</h5>
-                        <p><strong>Cargo:</strong> ${trabajo.querySelector("Cargo").textContent}</p>
-                        <p><strong>Periodo:</strong> ${trabajo.querySelector("Periodo").textContent}</p>
-                        <ul>
-                `;
-                trabajo.querySelectorAll("Tarea").forEach(tarea => {
-                    cvHTML += `<li>${tarea.textContent}</li>`;
+                const empresa = trabajo.querySelector("Empresa").textContent;
+                const cargo   = trabajo.querySelector("Cargo").textContent;
+                const periodo = trabajo.querySelector("Periodo").textContent;
+                html += `
+                <div class="cv-job">
+                    <div class="cv-job-header">
+                        <div>
+                            <span class="cv-job-title">${cargo}</span>
+                            <span class="cv-job-company">${empresa}</span>
+                        </div>
+                        <span class="cv-job-period">${periodo}</span>
+                    </div>
+                    <ul class="cv-job-tasks">`;
+                trabajo.querySelectorAll("Tarea").forEach(t => {
+                    html += `<li>${t.textContent}</li>`;
                 });
-                cvHTML += `</ul></div>`;
+                html += `</ul></div>`;
             });
+            html += `</div>`;
 
-            cvHTML += `<h4>Educación</h4>`;
-            educacion.forEach(estudio => {
-                cvHTML += `
-                    <p><strong>${estudio.querySelector("Titulo").textContent}</strong><br>
-                    ${estudio.querySelector("Institucion").textContent} (${estudio.querySelector("Periodo").textContent})</p>
-                `;
+            // ── EDUCACIÓN ────────────────────────────────────────────
+            html += `<div class="cv-section"><h3 class="cv-section-title">Educación</h3>`;
+            educacion.forEach(est => {
+                html += `
+                <div class="cv-edu">
+                    <div class="cv-job-header">
+                        <div>
+                            <span class="cv-job-title">${est.querySelector("Titulo").textContent}</span>
+                            <span class="cv-job-company">${est.querySelector("Institucion").textContent}</span>
+                        </div>
+                        <span class="cv-job-period">${est.querySelector("Periodo").textContent}</span>
+                    </div>
+                </div>`;
             });
+            html += `</div>`;
 
-            cvHTML += `<h4>Habilidades</h4><ul>`;
-            habilidades.forEach(habilidad => {
-                cvHTML += `<li>${habilidad.textContent}</li>`;
-            });
-            cvHTML += `</ul><h4>Idiomas</h4><ul>`;
-
+            // ── IDIOMAS ──────────────────────────────────────────────
+            html += `<div class="cv-section"><h3 class="cv-section-title">Idiomas</h3><div class="cv-idiomas">`;
             idiomas.forEach(idioma => {
-                cvHTML += `<li>${idioma.querySelector("Nombre").textContent} - ${idioma.querySelector("Nivel").textContent}</li>`;
+                html += `
+                <div class="cv-idioma-item">
+                    <span class="cv-idioma-nombre">${idioma.querySelector("Nombre").textContent}</span>
+                    <span class="cv-idioma-nivel">${idioma.querySelector("Nivel").textContent}</span>
+                </div>`;
             });
-            cvHTML += `</ul>`;
+            html += `</div></div>`;
 
-            // Agregar referencias
+            // ── REFERENCIAS ──────────────────────────────────────────
             if (referencias.length > 0) {
-                cvHTML += `<h4>Referencias</h4><ul>`;
+                html += `<div class="cv-section"><h3 class="cv-section-title">Referencias</h3><div class="cv-referencias">`;
                 referencias.forEach(ref => {
-                    cvHTML += `<li><strong>${ref.querySelector("Nombre").textContent}:</strong> ${ref.querySelector("Telefono").textContent}</li>`;
+                    html += `
+                    <div class="cv-ref-item">
+                        <span class="cv-ref-nombre">${ref.querySelector("Nombre").textContent}</span>
+                        <span class="cv-ref-tel">${ref.querySelector("Telefono").textContent}</span>
+                    </div>`;
                 });
-                cvHTML += `</ul>`;
+                html += `</div></div>`;
             }
 
-            document.getElementById("cv-content").innerHTML = cvHTML;
+            document.getElementById("cv-content").innerHTML = html;
         })
-        .catch(error => console.log("Error cargando el XML:", error));
+        .catch(error => console.error("Error cargando el XML:", error));
 });

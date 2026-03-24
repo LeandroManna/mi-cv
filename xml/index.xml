@@ -4,57 +4,61 @@
         <Nombre>Leandro Ariel Manna</Nombre>
         <Correo>leandromanna@gmail.com</Correo>
         <GitHub>https://github.com/LeandroManna</GitHub>
+        <CurriculumWeb>https://leandromanna.github.io/mi-cv/</CurriculumWeb>
         <Telefono>+54 388 469 5353</Telefono>
+        <Ubicacion>San Salvador de Jujuy, Argentina</Ubicacion>
         <FechaNacimiento>1987-07-25</FechaNacimiento>
+        <Titulo>Técnico en Informática · Desarrollador · Broadcast Engineer</Titulo>
         <Referencias>
             <Referencia>
-                <Nombre>Muñoz Miguel</Nombre>
-                <Telefono>+54 388 412 4728</Telefono>
+                <Nombre>Roberto Gomez</Nombre>
+                <Telefono>+54 9 388 412 4728</Telefono>
             </Referencia>
             <Referencia>
-                <Nombre>Gomez Roberto</Nombre>
-                <Telefono>+54 388 412 3600</Telefono>
+                <Nombre>Miguel Muñoz</Nombre>
+                <Telefono>+54 9 388 412 3600</Telefono>
             </Referencia>
         </Referencias>
     </Persona>
     <PerfilProfesional>
-        <Descripcion>Técnico en Informática con amplia experiencia en telecomunicaciones, redes informáticas, infraestructura y programación.</Descripcion>
+        <Descripcion>Técnico Superior en Informática con más de 14 años de experiencia en telecomunicaciones, infraestructura broadcast y desarrollo de software. Me especializo en la gestión integral de sistemas de transmisión de audio y video, administración de servidores Linux, automatización de procesos con Python y desarrollo de aplicaciones web. Combino sólidos conocimientos de infraestructura de red con capacidades de programación para resolver problemas complejos en entornos de producción en vivo.</Descripcion>
     </PerfilProfesional>
     <ExperienciaLaboral>
         <Trabajo>
-            <Empresa>Canal 4 - San Salvador de Jujuy - Argentina</Empresa>
+            <Empresa>Canal 4 · San Salvador de Jujuy, Argentina</Empresa>
             <Cargo>Técnico en Infraestructura, Sistemas y Contenidos</Cargo>
             <Periodo>2022 – Presente</Periodo>
             <Responsabilidades>
-                <Tarea>Instalación y mantenimiento del cableado de audio y video.</Tarea>
-                <Tarea>Ensamblaje y conectorización de VTRs y Play Out.</Tarea>
-                <Tarea>Gestión de servidores y configuración de switches.</Tarea>
-                <Tarea>Codificación en CentOS para streaming con FFMPEG.</Tarea>
-                <Tarea>Administración de Wowza Stream Manager.</Tarea>
-                <Tarea>Consulta a distintas APIs para enviar información al área de Contenidos.</Tarea>
-                <Tarea>Scraping con Python para generar datos automatizados para el área de Contenidos.</Tarea>
-                <Tarea>Transmisiones en vivo con unidad móvil de exteriores, utilizando switcher, VTR, consola de sonido y siete cámaras.</Tarea>
-                <Tarea>Administración, control y mantenimiento de cinco radios por streaming y tres por FM.</Tarea>
+                <Tarea>Administración de servidores Linux (CentOS/Ubuntu): configuración, monitoreo y mantenimiento en entornos de producción.</Tarea>
+                <Tarea>Gestión de infraestructura de red: switches, VLANs, routers MikroTik, APs UniFi y enlaces de fibra óptica.</Tarea>
+                <Tarea>Implementación y administración de plataformas de streaming: Wowza Stream Engine, FFmpeg, pipelines HLS/RTMP/UDP.</Tarea>
+                <Tarea>Armado, organización y etiquetado de racks de telecomunicaciones y broadcast siguiendo estándares profesionales.</Tarea>
+                <Tarea>Integración con APIs externas y automatización de flujos de trabajo mediante Python y scripting Bash.</Tarea>
+                <Tarea>Desarrollo de herramientas de monitoreo y alertas vía Telegram para infraestructura crítica (servidores, encoders, dispositivos Barix).</Tarea>
+                <Tarea>Gestión y mantenimiento de emisoras de radio: streaming IP, encoders FM, dispositivos de audio Barix.</Tarea>
+                <Tarea>Transmisiones en vivo desde exteriores con unidad móvil; configuración de vMix y encoders para YouTube Live.</Tarea>
+                <Tarea>Desarrollo de aplicaciones web internas (Flask, PHP, MySQL) para automatización de contenidos y gestión operativa.</Tarea>
             </Responsabilidades>
         </Trabajo>
         <Trabajo>
-            <Empresa>Canal 4 - San Salvador de Jujuy - Argentina</Empresa>
+            <Empresa>Canal 4 · San Salvador de Jujuy, Argentina</Empresa>
             <Cargo>Técnico en Telecomunicaciones</Cargo>
             <Periodo>2010 – 2022</Periodo>
             <Responsabilidades>
-                <Tarea>Tendido de fibra óptica troncal.</Tarea>
-                <Tarea>Instalación y ecualización de Minibridger y Line Extender CNA.</Tarea>
-                <Tarea>Instalación y mantenimiento de FTTH y HFC.</Tarea>
-                <Tarea>Configuración de puntos de acceso Ubiquiti.</Tarea>
+                <Tarea>Tendido e instalación de redes de fibra óptica troncal (HFC y FTTH).</Tarea>
+                <Tarea>Instalación, configuración y ecualización de equipos de planta externa: Minibridger y Line Extender CNA.</Tarea>
+                <Tarea>Configuración de puntos de acceso inalámbrico Ubiquiti para redes de distribución.</Tarea>
+                <Tarea>Mantenimiento correctivo y preventivo de infraestructura de red de telecomunicaciones.</Tarea>
             </Responsabilidades>
         </Trabajo>
         <Trabajo>
-            <Empresa>Proyectos Personales</Empresa>
-            <Cargo>Desarrollador y Automatizador</Cargo>
+            <Empresa>Desarrollo por cuenta propia</Empresa>
+            <Cargo>Desarrollador Web · Proyectos Independientes</Cargo>
             <Periodo>2022 – Presente</Periodo>
             <Responsabilidades>
-                <Tarea>Desarrollo en Python, PHP, HTML, CSS y JavaScript.</Tarea>
-                <Tarea>Automatización en controles de servicio con Python e integración con Telegram.</Tarea>
+                <Tarea>Desarrollo de aplicaciones SaaS: sistema de gestión y reservas para gimnasios (Flask, MySQL, Bootstrap 5), con enfoque en comercialización.</Tarea>
+                <Tarea>Automatización de procesos con Python: bots de Telegram, scrapers, integración con APIs REST y workflows programados.</Tarea>
+                <Tarea>Proyectos publicados en GitHub: github.com/LeandroManna</Tarea>
             </Responsabilidades>
         </Trabajo>
     </ExperienciaLaboral>
@@ -65,18 +69,44 @@
             <Periodo>2019 – 2021</Periodo>
         </Estudio>
         <Estudio>
-            <Titulo>Perito Mercantil - Administración Pública</Titulo>
+            <Titulo>Perito Mercantil – Administración Pública</Titulo>
             <Institucion>CENS N° 42</Institucion>
             <Periodo>2000 – 2006</Periodo>
         </Estudio>
     </Educacion>
     <Habilidades>
-        <Habilidad>Redes y Telecomunicaciones</Habilidad>
-        <Habilidad>Infraestructura y Sistemas</Habilidad>
-        <Habilidad>Streaming y Multimedia</Habilidad>
-        <Habilidad>Programación en HTML, CSS, JavaScript, Python, PHP</Habilidad>
-        <Habilidad>Bases de datos MySQL, phpMyAdmin</Habilidad>
-        <Habilidad>Automatización y scraping</Habilidad>
+        <Grupo nombre="Infraestructura y Redes">
+            <Habilidad>Linux (CentOS, Ubuntu)</Habilidad>
+            <Habilidad>MikroTik / UniFi</Habilidad>
+            <Habilidad>VLANs, HFC, FTTH</Habilidad>
+            <Habilidad>Armado y etiquetado de racks</Habilidad>
+            <Habilidad>Switches y routing</Habilidad>
+            <Habilidad>Fibra óptica</Habilidad>
+        </Grupo>
+        <Grupo nombre="Streaming y Broadcast">
+            <Habilidad>Wowza Stream Engine</Habilidad>
+            <Habilidad>FFmpeg / HLS / RTMP</Habilidad>
+            <Habilidad>vMix / YouTube Live</Habilidad>
+            <Habilidad>Encoders de audio/video</Habilidad>
+            <Habilidad>Dispositivos Barix</Habilidad>
+            <Habilidad>Unidad móvil exteriores</Habilidad>
+        </Grupo>
+        <Grupo nombre="Desarrollo y Programación">
+            <Habilidad>Python (Flask, Telegram)</Habilidad>
+            <Habilidad>PHP / HTML / CSS / JS</Habilidad>
+            <Habilidad>MySQL / phpMyAdmin</Habilidad>
+            <Habilidad>Bootstrap 5</Habilidad>
+            <Habilidad>APIs REST</Habilidad>
+            <Habilidad>Desarrollo SaaS</Habilidad>
+        </Grupo>
+        <Grupo nombre="Automatización y Herramientas">
+            <Habilidad>Scripts Bash</Habilidad>
+            <Habilidad>Scraping (BeautifulSoup)</Habilidad>
+            <Habilidad>Bots de Telegram</Habilidad>
+            <Habilidad>Task Scheduler (Windows)</Habilidad>
+            <Habilidad>Monitoreo de sistemas</Habilidad>
+            <Habilidad>Git / GitHub</Habilidad>
+        </Grupo>
     </Habilidades>
     <Idiomas>
         <Idioma>
@@ -85,7 +115,7 @@
         </Idioma>
         <Idioma>
             <Nombre>Inglés</Nombre>
-            <Nivel>Intermedio</Nivel>
+            <Nivel>Intermedio (lectura técnica avanzada)</Nivel>
         </Idioma>
     </Idiomas>
 </CurriculumVitae>
